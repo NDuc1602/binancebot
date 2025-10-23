@@ -26,8 +26,8 @@
 
 ```mermaid
 graph TD
-    A[Front-end (UI)<br>- Hiển thị giá & biểu đồ<br>- Nút Start/Stop Trading<br>- Lịch sử lệnh & PnL] -->|REST / WS| B(Back-end Server<br>- Lấy dữ liệu từ Binance<br>- Tính toán tín hiệu SMA<br>- Gửi lệnh BUY/SELL<br>- Quản lý rủi ro);
-    B --> C(Binance Testnet API<br>- Cung cấp giá thị trường<br>- Môi trường giả lập);
+    A["<b>Front-end (UI)</b><br/>- Hiển thị giá & biểu đồ<br/>- Nút Start/Stop Trading<br/>- Lịch sử lệnh & PnL"] -->|REST / WS| B["<b>Back-end Server</b><br/>- Lấy dữ liệu từ Binance<br/>- Tính toán tín hiệu SMA<br/>- Gửi lệnh BUY/SELL<br/>- Quản lý rủi ro"];
+    B --> C["<b>Binance Testnet API</b><br/>- Cung cấp giá thị trường<br/>- Môi trường giả lập"];
 ```
 
 ## **4. Thuật toán Trading (Ví dụ: SMA Crossover)**
