@@ -45,6 +45,7 @@ Triển khai (tùy chọn)	Railway / Render / Docker	Deploy ứng dụng demo
 │  - Môi trường giả lập      │
 └────────────────────────────┘
 
+
 🤖 Thuật toán Trading (ví dụ: SMA Cross)
 
 Ý tưởng:
