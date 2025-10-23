@@ -1,77 +1,57 @@
-Mục tiêu của đề tài
+# **Đề tài: Xây dựng Bot Giao dịch Tiền điện tử trên Binance Testnet**
 
-Tìm hiểu công nghệ Blockchain và ứng dụng của nó trong giao dịch tiền điện tử.
+## **1. Mục tiêu của Đề tài**
 
-Tìm hiểu và sử dụng Binance API (Testnet) để lấy dữ liệu thị trường và thực hiện lệnh giao dịch tự động.
+*   **Tìm hiểu công nghệ Blockchain** và ứng dụng của nó trong giao dịch tiền điện tử.
+*   **Tìm hiểu và sử dụng Binance API (Testnet)** để lấy dữ liệu thị trường và thực hiện lệnh giao dịch tự động.
+*   **Xây dựng ứng dụng Web** hoàn chỉnh bao gồm:
+    *   **Front-end:** Giao diện điều khiển bot trading, trực quan hóa dữ liệu.
+    *   **Back-end:** Kết nối với Binance Testnet, xử lý thuật toán trading và quản lý rủi ro.
+*   **Thiết kế thuật toán trading** tự động đơn giản (ví dụ: SMA Crossover Strategy).
+*   **Triển khai và demo** hệ thống thực tế, kiểm thử trên môi trường Binance Testnet.
 
-Xây dựng ứng dụng Web gồm:
+## **2. Phạm vi và Công nghệ sử dụng**
 
-Front-end: giao diện điều khiển bot trading.
+| Thành phần | Công nghệ | Mục đích |
+| :--- | :--- | :--- |
+| **Blockchain** | Binance Smart Chain (tham khảo) | Hiểu cơ chế lưu trữ & xác thực giao dịch |
+| **API Trading** | Binance Spot Testnet API | Lấy dữ liệu & đặt lệnh mua/bán |
+| **Back-end** | Node.js + Express + TypeScript | Giao tiếp với Binance API, xử lý logic |
+| **Front-end** | React (Vite) / HTML / Chart.js | Hiển thị giá và điều khiển bot |
+| **Giao tiếp** | REST API / WebSocket | Kết nối realtime giữa server và client |
+| **Quản lý code** | GitHub Projects + Issues | Theo dõi tiến độ nhóm |
+| **Triển khai (tùy chọn)** | Railway / Render / Docker | Deploy ứng dụng demo |
 
-Back-end: kết nối với Binance Testnet, xử lý thuật toán trading và quản lý rủi ro.
+## **3. Kiến trúc hệ thống**
 
-Thiết kế thuật toán trading tự động đơn giản (ví dụ: SMA Crossover Strategy).
+```mermaid
+graph TD
+    A[Front-end (UI)<br>- Hiển thị giá & biểu đồ<br>- Nút Start/Stop Trading<br>- Lịch sử lệnh & PnL] -->|REST / WS| B(Back-end Server<br>- Lấy dữ liệu từ Binance<br>- Tính toán tín hiệu SMA<br>- Gửi lệnh BUY/SELL<br>- Quản lý rủi ro);
+    B --> C(Binance Testnet API<br>- Cung cấp giá thị trường<br>- Môi trường giả lập);
+```
 
-Triển khai và demo hệ thống thực tế, kiểm thử trên Binance Testnet.
+## **4. Thuật toán Trading (Ví dụ: SMA Crossover)**
 
-🔗 Phạm vi và công nghệ sử dụng
-Thành phần	Công nghệ	Mục đích
-Blockchain	Binance Smart Chain (tham khảo)	Hiểu cơ chế lưu trữ & xác thực giao dịch
-API Trading	Binance Spot Testnet API	Lấy dữ liệu & đặt lệnh mua/bán
-Back-end	Node.js + Express + TypeScript	Giao tiếp với Binance API, xử lý logic
-Front-end	React (Vite) / HTML / Chart.js	Hiển thị giá và điều khiển bot
-Giao tiếp	REST API / WebSocket	Kết nối realtime giữa server và client
-Quản lý code	GitHub Projects + Issues	Theo dõi tiến độ nhóm
-Triển khai (tùy chọn)	Railway / Render / Docker	Deploy ứng dụng demo
-⚙️ Kiến trúc hệ thống
-┌────────────────────────────┐
-│        Front-end (UI)      │
-│  - Hiển thị giá & biểu đồ  │
-│  - Nút Start/Stop Trading  │
-│  - Lịch sử lệnh & PnL      │
-└─────────────┬──────────────┘
-              │ REST / WS
-┌─────────────▼──────────────┐
-│       Back-end Server      │
-│  - Lấy dữ liệu từ Binance  │
-│  - Tính toán tín hiệu SMA  │
-│  - Gửi lệnh BUY/SELL       │
-│  - Quản lý rủi ro          │
-└─────────────┬──────────────┘
-              │
-┌─────────────▼──────────────┐
-│     Binance Testnet API    │
-│  - Cung cấp giá thị trường │
-│  - Môi trường giả lập      │
-└────────────────────────────┘
+#### **Ý tưởng:**
 
+Dựa trên việc tính toán và so sánh hai đường trung bình động đơn giản (SMA) với các khung thời gian khác nhau:
+*   **SMA nhanh (fast):** Ví dụ, trung bình giá của 7 cây nến gần nhất.
+*   **SMA chậm (slow):** Ví dụ, trung bình giá của 25 cây nến gần nhất.
 
-🤖 Thuật toán Trading (ví dụ: SMA Cross)
+#### **Quy tắc giao dịch:**
+*   **Tín hiệu MUA (BUY):** Khi đường SMA nhanh cắt lên trên đường SMA chậm.
+*   **Tín hiệu BÁN (SELL):** Khi đường SMA nhanh cắt xuống dưới đường SMA chậm.
 
-Ý tưởng:
+#### **Quản lý rủi ro:**
+*   **Giới hạn lỗ hàng ngày:** Ngừng giao dịch nếu tổng lỗ trong ngày vượt quá một ngưỡng nhất định (`MAX_DAILY_LOSS`).
+*   **Giới hạn khối lượng giao dịch:** Kiểm soát khối lượng tối đa cho mỗi lệnh (`MAX_OPEN_NOTIONAL`).
 
-Tính trung bình giá trong 2 khung thời gian:
+## **5. Kết quả mong đợi**
 
-SMA nhanh (fast) – ví dụ 7 nến gần nhất.
+✅ **Ứng dụng web** có khả năng lấy và hiển thị giá realtime từ Binance Testnet.
 
-SMA chậm (slow) – ví dụ 25 nến gần nhất.
+✅ **Thực hiện lệnh BUY/SELL** tự động dựa trên tín hiệu từ thuật toán SMA Crossover.
 
-Khi đường SMA nhanh cắt lên đường chậm → mua (BUY).
+✅ **Ghi log giao dịch**, hiển thị biểu đồ trực quan và trạng thái hoạt động của bot.
 
-Khi đường SMA nhanh cắt xuống đường chậm → bán (SELL).
-
-Giới hạn rủi ro:
-
-Không giao dịch khi lỗ quá MAX_DAILY_LOSS.
-
-Giới hạn khối lượng tối đa MAX_OPEN_NOTIONAL.
-
-📈 Kết quả mong đợi
-
-✅ Ứng dụng web có thể lấy giá realtime từ Binance Testnet.
-
-✅ Có thể thực hiện lệnh BUY/SELL tự động dựa trên tín hiệu SMA.
-
-✅ Ghi log giao dịch, hiển thị biểu đồ và trạng thái bot.
-
-✅ Có tài liệu hướng dẫn, báo cáo học thuật và video demo.
+✅ **Hoàn thiện tài liệu** hướng dẫn sử dụng, báo cáo học thuật và video demo sản phẩm.
