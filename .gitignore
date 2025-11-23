@@ -1,0 +1,86 @@
+# BinanceBot Project
+config*.json
+!config/*.example.json
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+logfile.txt
+
+# User data
+user_data/*
+!user_data/strategies/
+!user_data/notebooks/
+!user_data/freqaimodels/
+user_data/freqaimodels/*
+user_data/strategies/*
+user_data/notebooks/*
+user_data/data/*
+
+# Output files
+binancebot-plot.html
+binancebot-profit-plot.html
+hyperopt_results/
+backtest_results/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Node.js (for scripts)
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# Builds
+*.tar.gz
+*.zip
+
+# Backup files
+*.bak
+*.old
+*.backup
+.gitignore.server
+server/

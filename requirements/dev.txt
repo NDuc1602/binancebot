@@ -1,0 +1,17 @@
+# Development dependencies for BinanceBot
+-r base.txt
+
+# Testing
+pytest==8.3.4
+pytest-asyncio==0.25.2
+pytest-cov==6.0.0
+pytest-mock==3.14.0
+
+# Code quality
+ruff==0.9.1
+mypy==1.14.1
+pre-commit==4.0.1
+
+# Development tools
+ipython==8.33.0
+jupyter==1.1.1

@@ -1,0 +1,9 @@
+# FreqAI Reinforcement Learning dependencies for BinanceBot
+-r freqai.txt
+
+# Reinforcement Learning libraries
+torch==2.9.1; sys_platform != 'darwin' or platform_machine != 'x86_64'
+gymnasium==1.2.2
+stable_baselines3==2.7.0; sys_platform != 'darwin' or platform_machine != 'x86_64'
+sb3_contrib>=2.2.1; sys_platform != 'darwin' or platform_machine != 'x86_64'
+tqdm==4.67.1

@@ -1,0 +1,58 @@
+# Core dependencies for BinanceBot
+numpy==2.3.4
+pandas==2.3.3
+bottleneck==1.6.0
+numexpr==2.14.1
+
+# Indicator libraries
+ft-pandas-ta==0.3.16
+ta-lib==0.6.8
+ta==0.11.0
+technical==1.5.3
+
+# Exchange & Trading
+ccxt==4.5.20
+cryptography==46.0.3
+aiohttp==3.13.2
+SQLAlchemy==2.0.44
+httpx>=0.24.1
+humanize==4.14.0
+cachetools==6.2.1
+requests==2.32.5
+urllib3==2.5.0
+certifi==2025.11.12
+jsonschema==4.25.1
+tabulate==0.9.0
+pycoingecko==3.2.0
+jinja2==3.1.6
+joblib==1.5.2
+rich==14.2.0
+pyarrow==22.0.0; platform_machine != 'armv7l'
+
+# Performance
+python-rapidjson==1.22
+orjson==3.11.4
+
+# System notifications
+sdnotify==0.3.2
+
+# API Server
+fastapi==0.121.1
+pydantic==2.12.4
+uvicorn==0.38.0
+pyjwt==2.10.1
+aiofiles==25.1.0
+psutil==7.1.3
+
+# Interactive configuration
+questionary==2.1.1
+prompt-toolkit==3.0.52
+python-dateutil==2.9.0.post0
+
+# Websockets
+websockets==14.1
+janus==2.0.0
+schedule==1.2.2
+pytz==2024.2
+packaging==24.2
+ast-comments==1.2.3
