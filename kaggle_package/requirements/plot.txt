@@ -1,5 +1,0 @@
-# Plotting dependencies for BinanceBot
--r base.txt
-
-# Visualization
-plotly==6.4.0
