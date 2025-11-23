@@ -1,0 +1,10 @@
+{
+  "title": "BinanceBot Training Data 2020-2025",
+  "id": "yourusername/binancebot-data-2020-2025",
+  "licenses": [
+    {
+      "name": "CC0-1.0"
+    }
+  ],
+  "description": "Historical OHLCV data for BinanceBot training\n\nGenerated: 2025-11-23 16:42:15\n\nPairs: BTC/USDT, ETH/USDT, BNB/USDT\nTimeframes: 4h, 12h, 1d\nPeriod: 2020-01-01 to 2025-11-22\nFiles: 9"
+}
