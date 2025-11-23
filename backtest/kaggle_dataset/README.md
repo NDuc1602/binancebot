@@ -41,4 +41,4 @@ data/
     └── BNB_USDT-1d.json
 ```
 
-Generated: 2025-11-23 16:42:15
+Generated: 2025-11-23 16:57:00
